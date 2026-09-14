@@ -4,24 +4,35 @@ author: "Delaram Bameri"
 date: "2026-09-14"
 categories: [journal]
 ---
-#Monday's main take home messages
 
-##What I did 
+::: {.callout-note collapse="true" title="Monday's main take-home messages"}
+Getting comfortable with Git version control and Quarto for building a reproducible blog.
+:::
 
-	1) Getting used to git version controls 
-	2) Creating an initial blog with Quarto 
-  
-##What I learned
+::: {.panel-tabset}
 
-	1) git clone (from a github link) 
-	2) git checkout -b "name_of_branch" :  create my own branch
-	3) modify the required file 
-	4) git status
-	5) git diff ( the differneces) 
-	6) git add . 
-	7) git commit -m "write what I have done"
-	8) git push 
-	9) git fetch origin (name of another branch)
-	10)git merge origin/the branch 
-	11) do the modification again , save , git add, git commit, push   
+## What I did
 
+1. Getting used to git version control
+2. Creating an initial blog with Quarto
+
+## What I learned
+
+1. `git clone` — clone a repo from a GitHub link
+2. `git checkout -b "branch_name"` — create your own branch
+3.  Modify the required file, save it, and then check the status of your repo
+4. `git status` — check what's changed
+5. `git diff` — see the actual differences
+6. `git add .`
+7. `git commit -m "message"`
+8. `git push`
+9. `git fetch origin` — pull down another branch's info
+10. `git merge origin/branch_name`
+11. Repeat: modify → save → add → commit → push
+
+## Useful links
+
+- [Quarto documentation] (https://quarto.org/docs/output-formats/html-basics.html)
+- [reproducible research course] (https://amrei-bp.github.io/Reproducible_Research/course_blog.html)
+
+:::
