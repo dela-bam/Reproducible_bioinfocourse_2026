@@ -21,13 +21,15 @@
 
 
 
+<section id="mondays-main-take-home-messages" class="level1">
+
 <section id="what-i-did" class="level2">
 
 <pre><code>1) Getting used to git version controls 
 2) Creating an initial blog with Quarto </code></pre>
 </section>
 <section id="what-i-learned" class="level2">
-<h2 class="anchored" data-anchor-id="what-i-learned">What I learned</h2>
+
 <pre><code>1) git clone (from a github link) 
 2) git checkout -b "name_of_branch" :  create my own branch
 3) modify the required file 
@@ -41,6 +43,7 @@
 11) do the modification again , save , git add, git commit, push   </code></pre>
 
 
+</section>
 </section>
 
  ]]></description>
@@ -69,6 +72,27 @@
   <guid>https://dela-bam.github.io/Reproducible_bioinfocourse_2026/posts/post-with-code/</guid>
   <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
   <media:content url="https://dela-bam.github.io/Reproducible_bioinfocourse_2026/posts/post-with-code/image.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Monday</title>
+  <dc:creator>Delaram Bameri</dc:creator>
+  <link>https://dela-bam.github.io/Reproducible_bioinfocourse_2026/posts/Tuesday/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="tuesdays-main-take-home-messages" class="level1">
+
+
+
+</section>
+
+ ]]></description>
+  <category>reproducible-research</category>
+  <guid>https://dela-bam.github.io/Reproducible_bioinfocourse_2026/posts/Tuesday/</guid>
+  <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Welcome To My Blog</title>
