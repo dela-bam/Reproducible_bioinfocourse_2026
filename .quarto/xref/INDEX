@@ -16,5 +16,14 @@
   },
   "posts/Tuesday/index.qmd": {
     "index.html": "3d2693c8"
+  },
+  "posts/Days/Monday/index.qmd": {
+    "index.html": "609d6906"
+  },
+  "posts/Days/Tuesday/index.qmd": {
+    "index.html": "56ed70a9"
+  },
+  "journal.qmd": {
+    "journal.html": "1890552f"
   }
 }

@@ -1,7 +1,9 @@
 ---
-title: "Reproducible Research_DB"
+title: "Reproducible Research course 2026"
 listing:
-  contents: posts
+  contents: 
+    - posts/welcome
+    - posts/post-with-code
   feed: true
   sort: "date desc"
   type: default

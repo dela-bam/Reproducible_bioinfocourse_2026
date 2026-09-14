@@ -9,6 +9,11 @@ website:
       - about.qmd
       - icon: github
         href: https://github.com/
+  sidebar: 
+    - id: journal
+      title: "Journal"
+      style: "docked"
+      contents: posts/Days
 format:
   html:
     theme:
