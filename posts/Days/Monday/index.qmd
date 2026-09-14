@@ -32,8 +32,7 @@ Getting comfortable with Git version control and Quarto for building a reproduci
 
 ## Useful links
 
-- [Quarto documentation](https://quarto.org/docs/output-formats/html-basics.html) {target="_blank"}
-- [reproducible research course](https://amrei-bp.github.io/Reproducible_Research/course_blog.html) {target="_blank"}
-
+- [Quarto documentation](https://quarto.org/docs/output-formats/html-basics.html){target="_blank"}
+- [reproducible research course](https://amrei-bp.github.io/Reproducible_Research/course_blog.html){target="_blank"}
 
 :::
