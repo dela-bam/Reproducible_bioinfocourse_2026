@@ -11,7 +11,7 @@
     "href": "posts/Days/Tuesday/index.html",
     "title": "Tuesday",
     "section": "",
-    "text": "Tuesday’s main take home messages",
+    "text": "#Tuesday’s main take home messages",
     "crumbs": [
       "Days",
       "Tuesday"
@@ -43,29 +43,7 @@
     "href": "posts/Days/Monday/index.html",
     "title": "Monday",
     "section": "",
-    "text": "1) Getting used to git version controls \n2) Creating an initial blog with Quarto \n\n\n\n1) git clone (from a github link) \n2) git checkout -b \"name_of_branch\" :  create my own branch\n3) modify the required file \n4) git status\n5) git diff ( the differneces) \n6) git add . \n7) git commit -m \"write what I have done\"\n8) git push \n9) git fetch origin (name of another branch)\n10)git merge origin/the branch \n11) do the modification again , save , git add, git commit, push",
-    "crumbs": [
-      "Days",
-      "Monday"
-    ]
-  },
-  {
-    "objectID": "posts/Days/Monday/index.html#what-i-did",
-    "href": "posts/Days/Monday/index.html#what-i-did",
-    "title": "Monday",
-    "section": "",
-    "text": "1) Getting used to git version controls \n2) Creating an initial blog with Quarto",
-    "crumbs": [
-      "Days",
-      "Monday"
-    ]
-  },
-  {
-    "objectID": "posts/Days/Monday/index.html#what-i-learned",
-    "href": "posts/Days/Monday/index.html#what-i-learned",
-    "title": "Monday",
-    "section": "",
-    "text": "1) git clone (from a github link) \n2) git checkout -b \"name_of_branch\" :  create my own branch\n3) modify the required file \n4) git status\n5) git diff ( the differneces) \n6) git add . \n7) git commit -m \"write what I have done\"\n8) git push \n9) git fetch origin (name of another branch)\n10)git merge origin/the branch \n11) do the modification again , save , git add, git commit, push",
+    "text": "#Monday’s main take home messages\n##What I did\n1) Getting used to git version controls \n2) Creating an initial blog with Quarto \n##What I learned\n1) git clone (from a github link) \n2) git checkout -b \"name_of_branch\" :  create my own branch\n3) modify the required file \n4) git status\n5) git diff ( the differneces) \n6) git add . \n7) git commit -m \"write what I have done\"\n8) git push \n9) git fetch origin (name of another branch)\n10)git merge origin/the branch \n11) do the modification again , save , git add, git commit, push",
     "crumbs": [
       "Days",
       "Monday"
