@@ -7,18 +7,39 @@
     "text": "This is a post with executable code."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "posts/Monday/index.html",
+    "href": "posts/Monday/index.html",
+    "title": "Monday",
     "section": "",
-    "text": "My name is Delaram Bameri, a PhD student at Uppsala university. This blog contains the materials and summary of the Reproducible Research course 2026, week3."
+    "text": "1) Getting used to git version controls \n2) Creating an initial blog with Quarto"
+  },
+  {
+    "objectID": "posts/Monday/index.html#what-i-did",
+    "href": "posts/Monday/index.html#what-i-did",
+    "title": "Monday",
+    "section": "",
+    "text": "1) Getting used to git version controls \n2) Creating an initial blog with Quarto"
+  },
+  {
+    "objectID": "posts/Monday/index.html#what-i-learned",
+    "href": "posts/Monday/index.html#what-i-learned",
+    "title": "Monday",
+    "section": "What I learned",
+    "text": "What I learned\n1) git clone (from a github link) \n2) git checkout -b \"name_of_branch\" :  create my own branch\n3) modify the required file \n4) git status\n5) git diff ( the differneces) \n6) git add . \n7) git commit -m \"write what I have done\"\n8) git push \n9) git fetch origin (name of another branch)\n10)git merge origin/the branch \n11) do the modification again , save , git add, git commit, push"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Reproducible Research_DB",
     "section": "",
-    "text": "Post With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 11, 2026\n\n\nDelaram Bameri\n\n\n\n\n\nNo matching items"
+    "text": "Monday\n\n\n\nreproducible-research\n\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\nDelaram Bameri\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 11, 2026\n\n\nDelaram Bameri\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "My name is Delaram Bameri, a PhD student at Uppsala university. This blog contains the materials and summary of the Reproducible Research course 2026, week3."
   },
   {
     "objectID": "posts/welcome/index.html",
