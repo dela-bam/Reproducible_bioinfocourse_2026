@@ -1,0 +1,26 @@
+---
+title: "Monday"
+author: "Delaram Bameri"
+date: "2026-09-14"
+categories: [reproducible-research]
+---
+
+## What I did 
+
+	1) Getting used to git version controls 
+	2) Creating an initial blog with Quarto 
+  
+## What I learned
+
+	1) git clone (from a github link) 
+	2) git checkout -b "name_of_branch" :  create my own branch
+	3) modify the required file 
+	4) git status
+	5) git diff ( the differneces) 
+	6) git add . 
+	7) git commit -m "write what I have done"
+	8) git push 
+	9) git fetch origin (name of another branch)
+	10)git merge origin/the branch 
+	11) do the modification again , save , git add, git commit, push   
+
