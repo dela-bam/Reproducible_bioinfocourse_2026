@@ -43,7 +43,7 @@
     "href": "posts/Days/Monday/index.html",
     "title": "Monday",
     "section": "",
-    "text": "NoteMonday’s main take-home messages\n\n\n\n\n\nGetting comfortable with Git version control and Quarto for building a reproducible blog.\n\n\n\n\nWhat I didWhat I learnedUseful links\n\n\n\nGetting used to git version control\nCreating an initial blog with Quarto\n\n\n\n\ngit clone — clone a repo from a GitHub link\ngit checkout -b \"branch_name\" — create your own branch\nModify the required file, save it, and then check the status of your repo\ngit status — check what’s changed\ngit diff — see the actual differences\ngit add .\ngit commit -m \"message\"\ngit push\ngit fetch origin — pull down another branch’s info\ngit merge origin/branch_name\nRepeat: modify → save → add → commit → push\n\n\n\n\nQuarto documentation {target=“_blank”}\nreproducible research course {target=“_blank”}",
+    "text": "NoteMonday’s main take-home messages\n\n\n\n\n\nGetting comfortable with Git version control and Quarto for building a reproducible blog.\n\n\n\n\nWhat I didWhat I learnedUseful links\n\n\n\nGetting used to git version control\nCreating an initial blog with Quarto\n\n\n\n\ngit clone — clone a repo from a GitHub link\ngit checkout -b \"branch_name\" — create your own branch\nModify the required file, save it, and then check the status of your repo\ngit status — check what’s changed\ngit diff — see the actual differences\ngit add .\ngit commit -m \"message\"\ngit push\ngit fetch origin — pull down another branch’s info\ngit merge origin/branch_name\nRepeat: modify → save → add → commit → push\n\n\n\n\nQuarto documentation\nreproducible research course",
     "crumbs": [
       "Days",
       "Monday"
