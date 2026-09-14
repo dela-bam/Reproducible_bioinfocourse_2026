@@ -3,7 +3,7 @@ project:
 
 website:
   description: "A blog built with Quarto"
-  title: "BLOG-reproducible research course-DB"
+  title: "Delaram's Blog"
   navbar:
     right:
       - about.qmd
