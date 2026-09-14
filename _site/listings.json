@@ -8,6 +8,9 @@
   },
   {
     "listing": "/journal.html",
-    "items": []
+    "items": [
+      "/posts/Days/Monday/index.html",
+      "/posts/Days/Tuesday/index.html"
+    ]
   }
 ]

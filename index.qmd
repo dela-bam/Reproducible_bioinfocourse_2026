@@ -1,5 +1,6 @@
 ---
 title: "Reproducible Research course 2026"
+sidebar: journal
 listing:
   contents: 
     - posts/welcome

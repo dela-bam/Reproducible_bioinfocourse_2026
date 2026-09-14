@@ -6,7 +6,8 @@
       "posts/post-with-code"
     ],
     "journal.qmd": [
-      "posts/days"
+      "posts/days",
+      "posts/Days"
     ]
   }
 }
