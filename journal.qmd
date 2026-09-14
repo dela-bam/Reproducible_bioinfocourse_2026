@@ -1,6 +1,6 @@
 ---
 title: "Daily Journal"
 listing:
-  contents: posts/days
+  contents: posts/Days
   sort: "date desc"
 ---
