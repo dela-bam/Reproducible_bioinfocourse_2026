@@ -3,7 +3,6 @@ project:
 
 website:
   description: "A blog built with Quarto"
-  site-url: https://your-website-url.example.com # you must change this appropriately for RSS feeds to work properly
   title: "BLOG-reproducible research course-DB"
   navbar:
     right:
@@ -17,7 +16,7 @@ format:
       - brand
     css: styles.css
     toc: true
+execute:
+  freeze: auto
     
-
-
 
