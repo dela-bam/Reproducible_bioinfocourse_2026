@@ -1,0 +1,16 @@
+---
+title: "About"
+image: min.jpg
+about:
+  template: jolla
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/delaram-bameri-bba537107/
+    - icon: github
+      text: Github
+      href: https://github.com/dela-bam
+
+---
+
+My name is Delaram Bameri, a PhD student at Uppsala university. This blog contains the materials and summary of the Reproducible Research course 2026, week3. 
