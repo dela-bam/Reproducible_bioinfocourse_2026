@@ -10,5 +10,11 @@
   },
   "about.qmd": {
     "about.html": "f217f949"
+  },
+  "posts/Monday/index.qmd": {
+    "index.html": "bb091011"
+  },
+  "posts/Tuesday/index.qmd": {
+    "index.html": "3d2693c8"
   }
 }
