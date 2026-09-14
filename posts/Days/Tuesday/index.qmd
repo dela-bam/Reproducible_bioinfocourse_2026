@@ -3,7 +3,7 @@
 title: "Tuesday"
 author: "Delaram Bameri"
 date: "2026-09-14"
-categories: [reproducible-research]
+categories: [journal]
 ---
   
-# Tuesday's main take home messages
+#Tuesday's main take home messages
