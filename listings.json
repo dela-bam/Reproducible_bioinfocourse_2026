@@ -3,9 +3,9 @@
     "listing": "/index.html",
     "items": [
       "/posts/Monday/index.html",
+      "/posts/welcome/index.html",
       "/posts/post-with-code/index.html",
-      "/posts/Tuesday/index.html",
-      "/posts/welcome/index.html"
+      "/posts/Tuesday/index.html"
     ]
   }
 ]
