@@ -1,5 +1,6 @@
 ---
 title: "Daily Journal"
+sidebar: journal
 listing:
   contents: posts/Days
   sort: "date desc"
