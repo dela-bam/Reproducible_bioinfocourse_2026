@@ -2,8 +2,52 @@
 ---
 title: "Tuesday"
 author: "Delaram Bameri"
-date: "2026-09-14"
+date: "2026-09-15"
 categories: [journal]
 ---
-  
-#Tuesday's main take home messages
+
+::: {.callout-note collapse="true" title="Tuesday's main take-home messages"}
+Setting up pixi as the environment
+:::
+
+::: {.panel-tabset}
+
+## What I did
+
+1. Pixi environment setups
+2. adding required packages to the pixi environment
+3. run required packages in the pixi environment
+4. used screen (similar to tmux session) to run the pixi environment in the background
+5. worked on the WGS data.
+6. used fastqc and multiqc for the downloaded data.
+7. checked slurm files after submitting the jobs and checked the output files.
+8. used bash scripts to be efficient using differnt tools. 
+
+
+## What I learned
+
+1. logged into the server: 
+    - ssh delaramb@kebnekaise.hpc2n.umu.se
+2. download pixi via webget: 
+    wget -qO- https://pixi.sh/install.sh | sh
+    source ~/.bashrc
+3. set up the pixi environment:
+    - pixi init <name_pixi_training> -c conda-forge -c bioconda
+    - toml file is created 
+4. adding dependencies (required packages for the pixi environment):
+    - pixi add <package_name>
+    - pixi run <package_name> to run the package in the pixi environment --help or other flags can be used to check the usage of the package
+5. note: on other servers such as uppmax or local we can do 1) pixi sell 2) <package_name> --help 3) exit
+6. screen -S <name_of_the session> 
+7. ctrl + a d to detach the session and ctrl -r <name_of_the_session> to reattach the session, screen -ls to list the sessions
+8. soft link of the WGS data to my own directory under project_dir.
+
+
+
+
+## Useful links
+
+- [Quarto documentation](https://quarto.org/docs/output-formats/html-basics.html){target="_blank"}
+- [reproducible research course](https://amrei-bp.github.io/Reproducible_Research/course_blog.html){target="_blank"}
+
+:::

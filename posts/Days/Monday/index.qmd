@@ -30,6 +30,11 @@ Getting comfortable with Git version control and Quarto for building a reproduci
 10. `git merge origin/branch_name`
 11. Repeat: modify → save → add → commit → push
 
+12. Quarto is a tool for creating reproducible documents, presentations, and websites.
+13. styles.css is a file that contains custom CSS styles for the blog.
+14. The `_quarto.yml` file is a configuration file that defines the settings for the Quarto project, including the website title, description, and navigation bar.
+
+
 ## Useful links
 
 - [Quarto documentation](https://quarto.org/docs/output-formats/html-basics.html){target="_blank"}
