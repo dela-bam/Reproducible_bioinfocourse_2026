@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Delaram Bameri">
-<meta name="dcterms.date" content="2026-09-14">
+<meta name="dcterms.date" content="2026-09-15">
 
 <title>Tuesday – Delaram’s Blog</title>
 <style>
@@ -147,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 14, 2026</p>
+        <p class="date">September 15, 2026</p>
       </div>
     </div>
     
@@ -198,7 +198,68 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>#Tuesday’s main take home messages</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Tuesday's main take-home messages">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Tuesday’s main take-home messages
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Setting up pixi as the environment</p>
+</div>
+</div>
+</div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">What I did</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">What I learned</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Useful links</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<ol type="1">
+<li>Pixi environment setups</li>
+<li>adding required packages to the pixi environment</li>
+<li>run required packages in the pixi environment</li>
+<li>used screen (similar to tmux session) to run the pixi environment in the background</li>
+<li>worked on the WGS data.</li>
+<li>used fastqc and multiqc for the downloaded data.</li>
+<li>checked slurm files after submitting the jobs and checked the output files.</li>
+<li>used bash scripts to be efficient using differnt tools.</li>
+</ol>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<ol type="1">
+<li>logged into the server:
+<ul>
+<li>ssh delaramb@kebnekaise.hpc2n.umu.se</li>
+</ul></li>
+<li>download pixi via webget: wget -qO- https://pixi.sh/install.sh | sh source ~/.bashrc</li>
+<li>set up the pixi environment:
+<ul>
+<li>pixi init <name_pixi_training> -c conda-forge -c bioconda</name_pixi_training></li>
+<li>toml file is created</li>
+</ul></li>
+<li>adding dependencies (required packages for the pixi environment):
+<ul>
+<li>pixi add <package_name></package_name></li>
+<li>pixi run <package_name> to run the package in the pixi environment –help or other flags can be used to check the usage of the package</package_name></li>
+</ul></li>
+<li>note: on other servers such as uppmax or local we can do 1) pixi sell 2) <package_name> –help 3) exit</package_name></li>
+<li>screen -S <name_of_the session=""></name_of_the></li>
+<li>ctrl + a d to detach the session and ctrl -r <name_of_the_session> to reattach the session, screen -ls to list the sessions</name_of_the_session></li>
+<li>soft link of the WGS data to my own directory under project_dir.</li>
+</ol>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<ul>
+<li><a href="https://quarto.org/docs/output-formats/html-basics.html" target="_blank">Quarto documentation</a></li>
+<li><a href="https://amrei-bp.github.io/Reproducible_Research/course_blog.html" target="_blank">reproducible research course</a></li>
+</ul>
+</div>
+</div>
+</div>
 
 
 
