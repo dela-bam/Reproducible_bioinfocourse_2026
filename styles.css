@@ -1,9 +1,19 @@
 /* css styles */
 
 .navbar {
-  background-color: #C8A2C8 !important;
+  background-color: #A082A0 !important;
 }
 
 .quarto-title-banner {
   background-color: #C8A2C8 !important;
+}
+
+.navbar-title {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.sidebar-item-text {
+  font-size: 1.1rem !important;
+  font-weight: bold !important;
 }
