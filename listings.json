@@ -1,16 +1,17 @@
 [
   {
+    "listing": "/journal.html",
+    "items": [
+      "/posts/Days/Wednesday/index.html",
+      "/posts/Days/Tuesday/index.html",
+      "/posts/Days/Monday/index.html"
+    ]
+  },
+  {
     "listing": "/index.html",
     "items": [
       "/posts/welcome/index.html",
       "/posts/post-with-code/index.html"
-    ]
-  },
-  {
-    "listing": "/journal.html",
-    "items": [
-      "/posts/Days/Tuesday/index.html",
-      "/posts/Days/Monday/index.html"
     ]
   }
 ]

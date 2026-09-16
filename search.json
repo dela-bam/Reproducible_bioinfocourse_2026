@@ -7,36 +7,15 @@
     "text": "This is a post with executable code."
   },
   {
-    "objectID": "posts/Days/Tuesday/index.html",
-    "href": "posts/Days/Tuesday/index.html",
-    "title": "Tuesday",
+    "objectID": "posts/Days/Wednesday/index.html",
+    "href": "posts/Days/Wednesday/index.html",
+    "title": "Wednesday",
     "section": "",
-    "text": "NoteTuesday’s main take-home messages\n\n\n\n\n\nSetting up pixi as the environment\n\n\n\n\nWhat I didWhat I learnedUseful links\n\n\n\nPixi environment setups\nadding required packages to the pixi environment\nrun required packages in the pixi environment\nused screen (similar to tmux session) to run the pixi environment in the background\nworked on the WGS data.\nused fastqc and multiqc for the downloaded data.\nchecked slurm files after submitting the jobs and checked the output files.\nused bash scripts to be efficient using differnt tools.\n\n\n\n\nlogged into the server:\n\nssh delaramb@kebnekaise.hpc2n.umu.se\n\ndownload pixi via webget: wget -qO- https://pixi.sh/install.sh | sh source ~/.bashrc\nset up the pixi environment:\n\npixi init  -c conda-forge -c bioconda\ntoml file is created\n\nadding dependencies (required packages for the pixi environment):\n\npixi add \npixi run  to run the package in the pixi environment –help or other flags can be used to check the usage of the package\n\nnote: on other servers such as uppmax or local we can do 1) pixi sell 2)  –help 3) exit\nscreen -S \nctrl + a d to detach the session and ctrl -r  to reattach the session, screen -ls to list the sessions\nsoft link of the WGS data to my own directory under project_dir.\n\n\n\n\nQuarto documentation\nreproducible research course",
+    "text": "NoteWednesday’s main take-home messages\n\n\n\n\n\nNextflow and how to use it for reproducible research.\n\n\n\n\nWhat I did in sumamryWhat I learnedUseful links\n\n\n\nvery basics of nextflow and how to use it for reproducible research.\ncp -r   to copy the files and directories recursively to the destination directory.\nnextflow receive the input files as channels, they go through processes (the scripts-codes) and then the output files are generated.\nIn short: process  { directives (containers, available modules to be loaded)\n input: \n     data x\n\n output:\n     output y \n\n script:\n     \"\"\"\n     this is like a fuction that takes the input and generates the output. \n     \"\"\"\n\n  u should also specify the workflow for the next flow to know what is the next process after the current process.   \n}\nintroducing the parameters and how to use them in the nextflow script adn workflow.\n\n\n\n\nlogged into the server:\n\nssh delaramb@kebnekaise.hpc2n.umu.se\n\ncp -r   to copy the files and directories recursively to the destination directory.\nscreen -S nextflow then set up the pixi environment:\n\npixi init -c conda-forge -c bioconda (remember the order is important)\ntoml file is created\nadding required dependencies ex. nextflow\n\nbelow is a simple nextflow (hello.nf)\n\n#!/usr/bin/env nextflow\nparams.greeting = ‘Hello world!’\nprocess SPLITLETTERS { input: val x\noutput:\npath 'chunk_*'\n\nscript:\n\"\"\"\nprintf '$x' | split -b 6 - chunk_\n\"\"\"\n}\nprocess CONVERTTOUPPER { input: path y\noutput:\nstdout\n\nscript:\n\"\"\"\ncat $y | tr '[a-z]' '[A-Z]'\n\"\"\"\n}\nworkflow { greeting_ch = Channel.of(params.greeting) letters_ch = SPLITLETTERS(greeting_ch) results_ch = CONVERTTOUPPER(letters_ch.flatten()) results_ch.view{ it } }\n\nrun the nextflow file:\n\npixi run nextflow run hello.nf\nsince there are jobs in parallel, the output might not nbe in order and the same.\n\nif there is any changes in the nextflow file, then we can run the nextflow file with -resume flag to resume the job from where it was stopped.\n\npixi run nextflow run hello.nf -resume\n\nif we want to run next flow on another parameter, we can use the –  to run the nextflow file with the new parameter.\n\npixi run nextflow run hello.nf –greeting “Hello Nextflow!”\n\npixi run nextflow log (to check the log of the nextflow file, the status of what we have done)\npixi run nextflow clean -f ( since we have work directory created, each time we are runnnign the nextflow, we can clean up these directories for the sake of space and memory.)\n\npixi run nextflow clean -before  -f remember to check the log at first, it is good and wise to be cautious while deleting files/directories.\n\n\n\n\n\nQuarto documentation\nreproducible research course",
     "crumbs": [
       "Days",
-      "Tuesday"
+      "Wednesday"
     ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "My name is Delaram Bameri, a PhD student at Uppsala university. This blog contains the materials and summary of the Reproducible Research course 2026, week3."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Reproducible Research course 2026",
-    "section": "",
-    "text": "Welcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\nDelaram Bameri\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\nDelaram Bameri\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "journal.html",
-    "href": "journal.html",
-    "title": "Daily Journal",
-    "section": "",
-    "text": "Tuesday\n\n\n\n\n\n\n\n\nSep 15, 2026\n\n\nDelaram Bameri\n\n\n\n\n\n\n\n\n\n\n\n\nMonday\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\nDelaram Bameri\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/Days/Monday/index.html",
@@ -47,6 +26,38 @@
     "crumbs": [
       "Days",
       "Monday"
+    ]
+  },
+  {
+    "objectID": "journal.html",
+    "href": "journal.html",
+    "title": "Daily Journal",
+    "section": "",
+    "text": "Wednesday\n\n\n\n\n\n\n\n\nSep 16, 2026\n\n\nDelaram Bameri\n\n\n\n\n\n\n\n\n\n\n\n\nTuesday\n\n\n\n\n\n\n\n\nSep 15, 2026\n\n\nDelaram Bameri\n\n\n\n\n\n\n\n\n\n\n\n\nMonday\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\nDelaram Bameri\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Reproducible Research course 2026",
+    "section": "",
+    "text": "Welcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\nDelaram Bameri\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\nDelaram Bameri\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "My name is Delaram Bameri, a PhD student at Uppsala university. This blog contains the materials and summary of the Reproducible Research course 2026, week3."
+  },
+  {
+    "objectID": "posts/Days/Tuesday/index.html",
+    "href": "posts/Days/Tuesday/index.html",
+    "title": "Tuesday",
+    "section": "",
+    "text": "NoteTuesday’s main take-home messages\n\n\n\n\n\nSetting up pixi as the environment Runnig fastqc and multiqc for the downloaded data. Using containers to run the tools in a reproducible way.\n\n\n\n\nWhat I did in summaryWhat I have done and learned with pixi environmentWhat I have done and learned about containersUseful links\n\n\n\nPixi environment setups\nadding required packages to the pixi environment\nrun required packages in the pixi environment\nused screen (similar to tmux session) to run the pixi environment in the background\nworked on the WGS data.\nused fastqc and multiqc for the downloaded data.\nchecked slurm files after submitting the jobs and checked the output files.\nused bash scripts to be efficient using differnt tools.\ntry to organize the files and directories in a better way while working on the server.\n\n\n\n\nlogged into the server:\n\nssh delaramb@kebnekaise.hpc2n.umu.se\n\ndownload pixi via webget if not installed: wget -qO- https://pixi.sh/install.sh | sh source ~/.bashrc (on the server, linux)\nset up the pixi environment:\n\npixi init  -c conda-forge -c bioconda\ntoml file is created\n\nadding dependencies (required packages for the pixi environment):\n\npixi add \npixi run  to run the package in the pixi environment –help or other flags can be used to check the usage of the package\n\nNote: on other servers such as uppmax or local we can also do 1) pixi sell 2)  –help 3) exit\nscreen -S \nctrl + a d to detach the session and ctrl -r  to reattach the session, screen -ls to list the sessions\nsoft link of the WGS data to my own directory under project_dir (ln -s)\nzcat | head -n 10\nman can initiate the pixi environment without naming it. so on the same directory the pixi environment can be initiated by just typing pixi init and then adding the required packages.\nscrun -A  -t  -n  pixi run  ex: srun -A project_ID -t 15:00 -n 1 pixi run fastqc –noextract -o fastqc data/sampleA_1.fastq.gz data/sampleA_2.fastq.gz\nI prefer to have scripts directory and the bash scripts to do the analysis. ex:\n\n#! /bin/bash -l #SBATCH -A project_ID #SBATCH -t 30:00 #SBATCH -n 1\npixi run fastqc -o ../fastqc –noextract ../data/*fastq.gz\nremember you might need: chmod+x  to make the script executable.\nsbatch  to submit the job to the server.\n\nwe used the same approach for the multiQC analysis.\n\n\n\n\nUsing seqera for the containers\nsince we have apptainer installed on the server, then we used it to pull the container from either docker or seqera. ex : apptainer pull vcftools_0.1.17.sif oras://community.wave.seqera.io/library/vcftools:0.1.17–b541aa8d9f9213f9\nwe should execute the container then ex: apptainer exec vcftools_0.1.17.sif vcftools –version\nremember containers are like the 3D photo album, so to use it, we should open the door, get inside then we can see the content of the container. so we should use exec to get inside the container and then run the tools inside the container.\nwe ran the fastqc and the multiqc using the containers.\n\n\n\n\nQuarto documentation\nreproducible research course",
+    "crumbs": [
+      "Days",
+      "Tuesday"
     ]
   },
   {

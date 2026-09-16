@@ -181,6 +181,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Tuesday</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../posts/Days/Wednesday/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wednesday</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -210,12 +216,12 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Setting up pixi as the environment</p>
+<p>Setting up pixi as the environment Runnig fastqc and multiqc for the downloaded data. Using containers to run the tools in a reproducible way.</p>
 </div>
 </div>
 </div>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">What I did</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">What I learned</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Useful links</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">What I did in summary</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">What I have done and learned with pixi environment</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">What I have done and learned about containers</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Useful links</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <ol type="1">
@@ -227,32 +233,53 @@ ul.task-list li input[type="checkbox"] {
 <li>used fastqc and multiqc for the downloaded data.</li>
 <li>checked slurm files after submitting the jobs and checked the output files.</li>
 <li>used bash scripts to be efficient using differnt tools.</li>
+<li>try to organize the files and directories in a better way while working on the server.</li>
 </ol>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <ol type="1">
-<li>logged into the server:
+<li><p>logged into the server:</p>
 <ul>
 <li>ssh delaramb@kebnekaise.hpc2n.umu.se</li>
 </ul></li>
-<li>download pixi via webget: wget -qO- https://pixi.sh/install.sh | sh source ~/.bashrc</li>
-<li>set up the pixi environment:
+<li><p>download pixi via webget if not installed: wget -qO- https://pixi.sh/install.sh | sh source ~/.bashrc (on the server, linux)</p></li>
+<li><p>set up the pixi environment:</p>
 <ul>
 <li>pixi init <name_pixi_training> -c conda-forge -c bioconda</name_pixi_training></li>
 <li>toml file is created</li>
 </ul></li>
-<li>adding dependencies (required packages for the pixi environment):
+<li><p>adding dependencies (required packages for the pixi environment):</p>
 <ul>
 <li>pixi add <package_name></package_name></li>
 <li>pixi run <package_name> to run the package in the pixi environment –help or other flags can be used to check the usage of the package</package_name></li>
 </ul></li>
-<li>note: on other servers such as uppmax or local we can do 1) pixi sell 2) <package_name> –help 3) exit</package_name></li>
-<li>screen -S <name_of_the session=""></name_of_the></li>
-<li>ctrl + a d to detach the session and ctrl -r <name_of_the_session> to reattach the session, screen -ls to list the sessions</name_of_the_session></li>
-<li>soft link of the WGS data to my own directory under project_dir.</li>
+<li><p>Note: on other servers such as uppmax or local we can also do 1) pixi sell 2) <package_name> –help 3) exit</package_name></p></li>
+<li><p>screen -S <name_of_the session=""></name_of_the></p></li>
+<li><p>ctrl + a d to detach the session and ctrl -r <name_of_the_session> to reattach the session, screen -ls to list the sessions</name_of_the_session></p></li>
+<li><p>soft link of the WGS data to my own directory under project_dir (ln -s)</p></li>
+<li><p>zcat <file>| head -n 10</file></p></li>
+<li><p>man can initiate the pixi environment without naming it. so on the same directory the pixi environment can be initiated by just typing pixi init and then adding the required packages.</p></li>
+<li><p>scrun -A <compute_proj_id> -t <time> -n <number_of_nodes> pixi run <tools and="" the="" commands="" for="" tools=""> ex: srun -A project_ID -t 15:00 -n 1 pixi run fastqc –noextract -o fastqc data/sampleA_1.fastq.gz data/sampleA_2.fastq.gz</tools></number_of_nodes></time></compute_proj_id></p></li>
+<li><p>I prefer to have scripts directory and the bash scripts to do the analysis. ex:</p></li>
+</ol>
+<p>#! /bin/bash -l #SBATCH -A project_ID #SBATCH -t 30:00 #SBATCH -n 1</p>
+<p>pixi run fastqc -o ../fastqc –noextract ../data/*fastq.gz</p>
+<p>remember you might need: chmod+x <script_name> to make the script executable.</script_name></p>
+<p>sbatch <script_name> to submit the job to the server.</script_name></p>
+<ol start="13" type="1">
+<li>we used the same approach for the multiQC analysis.</li>
 </ol>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<ol type="1">
+<li>Using <a href="https://seqera.io/containers/">seqera</a> for the containers</li>
+<li>since we have apptainer installed on the server, then we used it to pull the container from either docker or seqera. ex : apptainer pull vcftools_0.1.17.sif oras://community.wave.seqera.io/library/vcftools:0.1.17–b541aa8d9f9213f9</li>
+<li>we should execute the container then ex: apptainer exec vcftools_0.1.17.sif vcftools –version</li>
+<li>remember containers are like the 3D photo album, so to use it, we should open the door, get inside then we can see the content of the container. so we should use exec to get inside the container and then run the tools inside the container.</li>
+<li>we ran the fastqc and the multiqc using the containers.</li>
+</ol>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
 <ul>
 <li><a href="https://quarto.org/docs/output-formats/html-basics.html" target="_blank">Quarto documentation</a></li>
 <li><a href="https://amrei-bp.github.io/Reproducible_Research/course_blog.html" target="_blank">reproducible research course</a></li>
