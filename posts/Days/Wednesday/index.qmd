@@ -1,0 +1,111 @@
+
+---
+title: "Wednesday"
+author: "Delaram Bameri"
+date: "2026-09-16"
+categories: [journal]
+---
+
+::: {.callout-note collapse="true" title="Wednesday's main take-home messages"}
+Nextflow and how to use it for reproducible research.
+:::
+
+::: {.panel-tabset}
+
+## What I did in sumamry
+
+1. very basics of nextflow and how to use it for reproducible research.
+2. cp -r <source_dir> <destination_dir> to copy the files and directories recursively to the destination directory.
+3. nextflow receive the input files as channels, they go through processes (the scripts-codes) and then the output files are generated.
+4. In short: 
+    process <name_the_process_wisely> {
+        directives (containers, available modules to be loaded)
+
+        input: 
+            data x
+
+        output:
+            output y 
+
+        script:
+            """
+            this is like a fuction that takes the input and generates the output. 
+            """
+
+         u should also specify the workflow for the next flow to know what is the next process after the current process.   
+    }           
+           
+5. introducing the parameters and how to use them in the nextflow script adn workflow.
+
+
+
+## What I learned
+
+1. logged into the server: 
+    - ssh delaramb@kebnekaise.hpc2n.umu.se
+2. cp -r <source_dir> <destination_dir> to copy the files and directories recursively to the destination directory.
+3. screen -S nextflow then set up the pixi environment:
+    - pixi init -c conda-forge -c bioconda (remember the order is important)
+    - toml file is created 
+    - adding required dependencies ex. nextflow
+4. below is a simple nextflow (hello.nf)
+
+#!/usr/bin/env nextflow
+
+params.greeting = 'Hello world!' 
+
+process SPLITLETTERS {
+    input:
+    val x
+
+    output:
+    path 'chunk_*'
+
+    script:
+    """
+    printf '$x' | split -b 6 - chunk_
+    """
+}
+
+process CONVERTTOUPPER {
+    input:
+    path y
+
+    output:
+    stdout
+
+    script:
+    """
+    cat $y | tr '[a-z]' '[A-Z]'
+    """
+}
+
+workflow {
+    greeting_ch = Channel.of(params.greeting)
+    letters_ch = SPLITLETTERS(greeting_ch)
+    results_ch = CONVERTTOUPPER(letters_ch.flatten())
+    results_ch.view{ it }
+}
+
+4. run the nextflow file: 
+    - pixi run nextflow run hello.nf
+    - since there are jobs in parallel, the output might not nbe in order and the same.
+5. if there is any changes in the nextflow file, then we can run the nextflow file with -resume flag to resume the job from where it was stopped. 
+    - pixi run nextflow run hello.nf -resume
+6. if we want to run next flow on another parameter, we can use the --<name-parameter> <value> to run the nextflow file with the new parameter. 
+    - pixi run nextflow run hello.nf --greeting "Hello Nextflow!"
+7. pixi run nextflow log (to check the log of the nextflow file, the status of what we have done)
+8. pixi run nextflow clean -f ( since we have work directory created, each time we are runnnign the nextflow, we can clean up these directories for the sake of space and memory.)
+    - pixi run nextflow clean -before <RUN NAME> -f
+    remember to check the log at first, it is good and wise to be cautious while deleting files/directories. 
+
+
+    
+
+
+## Useful links
+
+- [Quarto documentation](https://quarto.org/docs/output-formats/html-basics.html){target="_blank"}
+- [reproducible research course](https://amrei-bp.github.io/Reproducible_Research/course_blog.html){target="_blank"}
+
+:::

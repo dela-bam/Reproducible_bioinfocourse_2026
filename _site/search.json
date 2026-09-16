@@ -60,7 +60,7 @@
     "href": "posts/Days/Monday/index.html",
     "title": "Monday",
     "section": "",
-    "text": "NoteMonday’s main take-home messages\n\n\n\n\n\nGetting comfortable with Git version control and Quarto for building a reproducible blog.\n\n\n\n\nWhat I didWhat I learnedUseful links\n\n\n\nGetting used to git version control\nCreating an initial blog with Quarto\n\n\n\n\ngit clone — clone a repo from a GitHub link\ngit checkout -b \"branch_name\" — create your own branch\nModify the required file, save it, and then check the status of your repo\ngit status — check what’s changed\ngit diff — see the actual differences\ngit add .\ngit commit -m \"message\"\ngit push\ngit fetch origin — pull down another branch’s info\ngit merge origin/branch_name\nRepeat: modify → save → add → commit → push\n\n\n\n\nQuarto documentation\nreproducible research course",
+    "text": "NoteMonday’s main take-home messages\n\n\n\n\n\nGetting comfortable with Git version control and Quarto for building a reproducible blog.\n\n\n\n\nWhat I didWhat I learnedUseful links\n\n\n\nGetting used to git version control\nCreating an initial blog with Quarto\n\n\n\n\ngit clone — clone a repo from a GitHub link\ngit checkout -b \"branch_name\" — create your own branch\nModify the required file, save it, and then check the status of your repo\ngit status — check what’s changed\ngit diff — see the actual differences\ngit add .\ngit commit -m \"message\"\ngit push\ngit fetch origin — pull down another branch’s info\ngit merge origin/branch_name\nRepeat: modify → save → add → commit → push\nQuarto is a tool for creating reproducible documents, presentations, and websites.\nstyles.css is a file that contains custom CSS styles for the blog.\nThe _quarto.yml file is a configuration file that defines the settings for the Quarto project, including the website title, description, and navigation bar.\n\n\n\n\nQuarto documentation\nreproducible research course",
     "crumbs": [
       "Days",
       "Monday"
@@ -93,7 +93,7 @@
     "href": "posts/Days/Tuesday/index.html",
     "title": "Tuesday",
     "section": "",
-    "text": "#Tuesday’s main take home messages",
+    "text": "NoteTuesday’s main take-home messages\n\n\n\n\n\nSetting up pixi as the environment\n\n\n\n\nWhat I didWhat I learnedUseful links\n\n\n\nPixi environment setups\nadding required packages to the pixi environment\nrun required packages in the pixi environment\nused screen (similar to tmux session) to run the pixi environment in the background\nworked on the WGS data.\nused fastqc and multiqc for the downloaded data.\nchecked slurm files after submitting the jobs and checked the output files.\nused bash scripts to be efficient using differnt tools.\n\n\n\n\nlogged into the server:\n\nssh delaramb@kebnekaise.hpc2n.umu.se\n\ndownload pixi via webget: wget -qO- https://pixi.sh/install.sh | sh source ~/.bashrc\nset up the pixi environment:\n\npixi init  -c conda-forge -c bioconda\ntoml file is created\n\nadding dependencies (required packages for the pixi environment):\n\npixi add \npixi run  to run the package in the pixi environment –help or other flags can be used to check the usage of the package\n\nnote: on other servers such as uppmax or local we can do 1) pixi sell 2)  –help 3) exit\nscreen -S \nctrl + a d to detach the session and ctrl -r  to reattach the session, screen -ls to list the sessions\nsoft link of the WGS data to my own directory under project_dir.\n\n\n\n\nQuarto documentation\nreproducible research course",
     "crumbs": [
       "Days",
       "Tuesday"
@@ -104,6 +104,6 @@
     "href": "journal.html",
     "title": "Daily Journal",
     "section": "",
-    "text": "Monday\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\nDelaram Bameri\n\n\n\n\n\n\n\n\n\n\n\n\nTuesday\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\nDelaram Bameri\n\n\n\n\n\nNo matching items"
+    "text": "Tuesday\n\n\n\n\n\n\n\n\nSep 15, 2026\n\n\nDelaram Bameri\n\n\n\n\n\n\n\n\n\n\n\n\nMonday\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\nDelaram Bameri\n\n\n\n\n\nNo matching items"
   }
 ]
