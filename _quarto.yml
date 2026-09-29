@@ -14,11 +14,13 @@ website:
       title: "Journal"
       style: "docked"
       contents: 
-        - posts/Days/Monday/index.qmd
-        - posts/Days/Tuesday/index.qmd
-        - posts/Days/Wednesday/index.qmd
-        - posts/Days/Thursday/index.qmd
-        - posts/Days/Friday/index.qmd
+        - sections: "Days"
+          contents:
+            - posts/Days/Monday/index.qmd
+            - posts/Days/Tuesday/index.qmd
+            - posts/Days/Wednesday/index.qmd
+            - posts/Days/Thursday/index.qmd
+            - posts/Days/Friday/index.qmd
 format:
   html:
     theme:
