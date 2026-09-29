@@ -1,0 +1,46 @@
+
+---
+title: "Friday"
+author: "Delaram Bameri"
+date: "2026-09-18"
+categories: [journal]
+---
+
+::: {.callout-note collapse="true" title="Wednesday's main take-home messages"}
+ 1. ggplot and data visualization
+ 2. AI and different aspects of it in the era of bioinformatics
+
+:::
+
+::: {.panel-tabset}
+
+
+## What I learned about ggplot
+
+1. ggplot is useful due to many reasons, consistent code, flexibility, differnet themes and so many add-ons 
+2. it can simplify the codes and we have a better visualization approach for our data. 
+3. ggplot(<data>) + geom_function(mapping=aes(<mapping>)) ; these are essentials 
+4. we can have multiple geoms for one plot
+5. it can be used to properly save the plot with required resolution/units.
+
+## What I learned about AI
+
+1. AI has been integrating in our daily life, though it's use could be balance and therefore it can hep in different aspect.
+2. it can be an useful tool for learning, however we should not blindly trusting AI. 
+3. regarding privacy, AI can use and access to private data. therefore for important and sensitive data, we should be more cautious while using AI. 
+4. while using AI, as users we are responsible regarding the choice of content
+5. remmeber, AI uses lots of resources and huge amount of EL + water too cool down the hardware. please, remember to optimize the use of AI either for daily life or proffessional life. we all should be considerate for the use of different resources. 
+
+
+
+
+    
+
+
+## Useful links
+- [ggplot](https://nbisweden.github.io/raukr-2026/labs/ggplot/)
+- [Quarto documentation](https://quarto.org/docs/output-formats/html-basics.html){target="_blank"}
+- [reproducible research course](https://amrei-bp.github.io/Reproducible_Research/course_blog.html){target="_blank"}
+- [AI](https://www.pointloma.edu/resources/business-leadership/how-optimize-your-chatgpt-experience-prompt-engineering)
+
+:::
