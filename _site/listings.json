@@ -12,6 +12,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/acknowledgements/index.html",
       "/posts/welcome/index.html"
     ]
   }
