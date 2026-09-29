@@ -3,7 +3,7 @@ title: "Acknowledgements"
 author: "Delaram Bameri"
 date: "2026-09-29"
 categories: ["Acknowledgements"]
-image: thumbnail.jpg
+image: F326C37B-FE85-4B87-B7EE-BD7D7E4EAAB7.jpg
 ---
 
 
