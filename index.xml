@@ -21,10 +21,8 @@
 
 
 
-<p>Welcome to my blog!</p>
+<p>Welcome to my blog for the reproducible reaserch course!</p>
 <p>In this blog, you can trace my learning journey in reproducible research course. Each post will be a summary of what I have learned throughout the specific day of the course. I will also share some of my thoughts and important points for the future references.</p>
-<p><img src="https://dela-bam.github.io/Reproducible_bioinfocourse_2026/posts/welcome/thumbnail.jpg" class="img-fluid"></p>
-<p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
 
 
 
