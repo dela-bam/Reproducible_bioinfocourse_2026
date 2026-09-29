@@ -27,7 +27,7 @@ Using containers to run the tools in a reproducible way.
 9. try to organize the files and directories in a better way while working on the server.
 
 
-## What I have done and learned with pixi environment
+## pixi environment 
 
 1. logged into the server: 
     - ssh delaramb@kebnekaise.hpc2n.umu.se
@@ -35,13 +35,17 @@ Using containers to run the tools in a reproducible way.
     wget -qO- https://pixi.sh/install.sh | sh
     source ~/.bashrc (on the server, linux)
 3. set up the pixi environment:
-    - pixi init <name_pixi_training> -c conda-forge -c bioconda
+    
+```{.bash} 
+pixi init <name_pixi_training> -c conda-forge -c bioconda 
+```
+    
     - toml file is created 
 4. adding dependencies (required packages for the pixi environment):
-    - pixi add <package_name>
-    - pixi run <package_name> to run the package in the pixi environment --help or other flags can be used to check the usage of the package
+    - ```{.bash} pixi add <package_name> ```
+    - ```{.bash} pixi run <package_name> ``` to run the package in the pixi environment --help or other flags can be used to check the usage of the package
 5. Note: on other servers such as uppmax or local we can also do 1) pixi sell 2) <package_name> --help 3) exit
-6. screen -S <name_of_the session> 
+6. ```{.bash} screen -S <name_of_the session> ```
 7. ctrl + a d to detach the session and ctrl -r <name_of_the_session> to reattach the session, screen -ls to list the sessions 
 8. soft link of the WGS data to my own directory under project_dir  (ln -s)
 9. zcat <file>| head -n 10
@@ -66,7 +70,7 @@ sbatch <script_name> to submit the job to the server.
 13. we used the same approach for the multiQC analysis. 
 
 
-## What I have done and learned about containers
+## Containers
 
 1. Using [seqera](https://seqera.io/containers/) for the containers 
 2. since we have apptainer installed on the server, then we used it to pull the container from either docker or seqera.
