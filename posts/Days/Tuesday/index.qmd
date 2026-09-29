@@ -42,8 +42,13 @@ pixi init <name_pixi_training> -c conda-forge -c bioconda
     
     - toml file is created 
 4. adding dependencies (required packages for the pixi environment):
-    - ```{.bash} pixi add <package_name> ```
-    - ```{.bash} pixi run <package_name> ``` to run the package in the pixi environment --help or other flags can be used to check the usage of the package
+```{.bash} 
+pixi add <package_name> 
+```
+```{.bash} 
+pixi run <package_name> 
+``` 
+to run the package in the pixi environment <--help> or other flags can be used to check the usage of the package
 5. Note: on other servers such as uppmax or local we can also do 1) pixi sell 2) <package_name> --help 3) exit
 6. ```{.bash} screen -S <name_of_the session> ```
 7. ctrl + a d to detach the session and ctrl -r <name_of_the_session> to reattach the session, screen -ls to list the sessions 
