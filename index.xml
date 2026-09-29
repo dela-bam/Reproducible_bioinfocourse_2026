@@ -23,11 +23,21 @@
 
 <p>Welcome to my blog for the reproducible reaserch course!</p>
 <p>In this blog, you can trace my learning journey in reproducible research course. Each post will be a summary of what I have learned throughout the specific day of the course. I will also share some of my thoughts and important points for the future references.</p>
+<section id="browse-by-day" class="level2">
+<h2 class="anchored" data-anchor-id="browse-by-day">Browse by day</h2>
+<ul>
+<li><a href="../../posts/Days/Monday/index.html">Monday</a></li>
+<li><a href="../../posts/Days/Tuesday/index.html">Tuesday</a></li>
+<li><a href="../../posts/Days/Wednesday/index.html">Wednesday</a></li>
+<li><a href="../../posts/Days/Thursday/index.html">Thursday</a></li>
+<li><a href="../../posts/Days/Friday/index.html">Friday</a></li>
+</ul>
 
 
+</section>
 
  ]]></description>
-  <category>news</category>
+  <category>Blog info</category>
   <guid>https://dela-bam.github.io/Reproducible_bioinfocourse_2026/posts/welcome/</guid>
   <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
 </item>
