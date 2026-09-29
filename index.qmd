@@ -4,7 +4,7 @@ sidebar: journal
 listing:
   contents: 
     - posts/welcome
-    - posts/acknowledgement
+    - posts/acknowlegement
 #    - posts/post-with-code
   feed: true
   sort: "date desc"
