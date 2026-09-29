@@ -6,7 +6,7 @@ date: "2026-09-17"
 categories: [journal]
 ---
 
-::: {.callout-note collapse="true" title="Wednesday's main take-home messages"}
+::: {.callout-note collapse="true" title="Thursday's main take-home messages"}
  nf-cores, a set of open-source analysis pipelines built by nextflow
 :::
 
