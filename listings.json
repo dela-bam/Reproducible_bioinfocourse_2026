@@ -9,11 +9,11 @@
   {
     "listing": "/journal.html",
     "items": [
-      "/posts/Days/Friday/index.html",
-      "/posts/Days/Thursday/index.html",
-      "/posts/Days/Wednesday/index.html",
+      "/posts/Days/Monday/index.html",
       "/posts/Days/Tuesday/index.html",
-      "/posts/Days/Monday/index.html"
+      "/posts/Days/Wednesday/index.html",
+      "/posts/Days/Thursday/index.html",
+      "/posts/Days/Friday/index.html"
     ]
   }
 ]
