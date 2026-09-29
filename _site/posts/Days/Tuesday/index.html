@@ -28,6 +28,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -126,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../posts/Days/Tuesday/index.html">Tuesday</a></li></ol></nav>
       <h1 class="title">Tuesday</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">journal</div>
@@ -160,36 +195,6 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../posts/Days/Monday/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Monday</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../posts/Days/Tuesday/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Tuesday</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../posts/Days/Wednesday/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Wednesday</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../posts/Days/Thursday/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Thursday</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../posts/Days/Friday/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Friday</span></a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
@@ -239,33 +244,43 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <ol type="1">
-<li><p>logged into the server:</p>
+<li>logged into the server:
 <ul>
 <li>ssh delaramb@kebnekaise.hpc2n.umu.se</li>
 </ul></li>
-<li><p>download pixi via webget if not installed: wget -qO- https://pixi.sh/install.sh | sh source ~/.bashrc (on the server, linux)</p></li>
-<li><p>set up the pixi environment:</p>
-<ul>
-<li><code>{.bash} pixi init &lt;name_pixi_training&gt; -c conda-forge -c bioconda</code></li>
-<li>toml file is created</li>
-</ul></li>
-<li><p>adding dependencies (required packages for the pixi environment):</p>
-<ul>
-<li><code>{.bash} pixi add &lt;package_name&gt;</code></li>
-<li><code>{.bash} pixi run &lt;package_name&gt;</code> to run the package in the pixi environment –help or other flags can be used to check the usage of the package</li>
-</ul></li>
-<li><p>Note: on other servers such as uppmax or local we can also do 1) pixi sell 2) <package_name> –help 3) exit</package_name></p></li>
-<li><p><code>{.bash} screen -S &lt;name_of_the session&gt;</code></p></li>
-<li><p>ctrl + a d to detach the session and ctrl -r <name_of_the_session> to reattach the session, screen -ls to list the sessions</name_of_the_session></p></li>
-<li><p>soft link of the WGS data to my own directory under project_dir (ln -s)</p></li>
-<li><p>zcat <file>| head -n 10</file></p></li>
-<li><p>man can initiate the pixi environment without naming it. so on the same directory the pixi environment can be initiated by just typing pixi init and then adding the required packages.</p></li>
-<li><p>scrun -A <compute_proj_id> -t <time> -n <number_of_nodes> pixi run <tools and="" the="" commands="" for="" tools=""> ex: srun -A project_ID -t 15:00 -n 1 pixi run fastqc –noextract -o fastqc data/sampleA_1.fastq.gz data/sampleA_2.fastq.gz</tools></number_of_nodes></time></compute_proj_id></p></li>
-<li><p>I prefer to have scripts directory and the bash scripts to do the analysis. ex:</p></li>
+<li>download pixi via webget if not installed: wget -qO- https://pixi.sh/install.sh | sh source ~/.bashrc (on the server, linux)</li>
+<li>set up the pixi environment (make sure the toml file is created):</li>
 </ol>
-<p>#! /bin/bash -l #SBATCH -A project_ID #SBATCH -t 30:00 #SBATCH -n 1</p>
-<p>pixi run fastqc -o ../fastqc –noextract ../data/*fastq.gz</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> init <span class="op">&lt;</span>name_pixi_training<span class="op">&gt;</span> -c conda-forge <span class="at">-c</span> bioconda </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="4" type="1">
+<li>adding dependencies (required packages for the pixi environment):</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> add <span class="op">&lt;</span>package_name<span class="op">&gt;</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run <span class="op">&lt;</span>package_name<span class="op">&gt;</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>to run the package in the pixi environment &lt;–help&gt; or other flags can be used to check the usage of the package 5. Note: on other servers such as uppmax or local we can also do 1) pixi sell 2) <package_name> –help 3) exit 6. <code>{.bash} screen -S &lt;name_of_the session&gt;</code> 7. ctrl + a d to detach the session and ctrl -r <name_of_the_session> to reattach the session, screen -ls to list the sessions 8. soft link of the WGS data to my own directory under project_dir (ln -s) 9. zcat <file>| head -n 10 10. man can initiate the pixi environment without naming it. so on the same directory the pixi environment can be initiated by just typing pixi init and then adding the required packages. 11. scrun -A <compute_proj_id> -t <time> -n <number_of_nodes> pixi run <tools and="" the="" commands="" for="" tools=""> ex: srun -A project_ID -t 15:00 -n 1 pixi run fastqc –noextract -o fastqc data/sampleA_1.fastq.gz data/sampleA_2.fastq.gz</tools></number_of_nodes></time></compute_proj_id></file></name_of_the_session></package_name></p>
+<ol start="12" type="1">
+<li>I prefer to have scripts directory and the bash scripts to do the analysis. ex:</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#! /bin/bash -l</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH -A project_ID</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH -t 30:00</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH -n 1</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run fastqc <span class="at">-o</span> ../fastqc <span class="at">--noextract</span> ../data/<span class="pp">*</span>fastq.gz</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>remember you might need: chmod+x <script_name> to make the script executable.</script_name></p>
+</div>
+</div>
 <p>sbatch <script_name> to submit the job to the server.</script_name></p>
 <ol start="13" type="1">
 <li>we used the same approach for the multiQC analysis.</li>
