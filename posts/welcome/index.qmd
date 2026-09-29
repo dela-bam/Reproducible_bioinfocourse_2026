@@ -9,6 +9,8 @@ Welcome to my blog for the reproducible reaserch course!
 
 In this blog, you can trace my learning journey in reproducible research course. Each post will be a summary of what I have learned throughout the specific day of the course. I will also share some of my thoughts and important points for the future references. 
 
+![](A69D02CD-8F96-489F-814E-6387C3C1B3B6.jpg)
+
 ## Browse by day
 
 - [Monday](/posts/Days/Monday/index.qmd)
