@@ -36,20 +36,6 @@
     "text": "This is a post with executable code."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Reproducible Research course 2026",
-    "section": "",
-    "text": "Welcome To My Blog\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\nDelaram Bameri\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "journal.html",
-    "href": "journal.html",
-    "title": "Daily Journal",
-    "section": "",
-    "text": "Monday\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\nDelaram Bameri\n\n\n\n\n\n\n\n\n\n\n\n\nTuesday\n\n\n\n\n\n\n\n\nSep 15, 2026\n\n\nDelaram Bameri\n\n\n\n\n\n\n\n\n\n\n\n\nWednesday\n\n\n\n\n\n\n\n\nSep 16, 2026\n\n\nDelaram Bameri\n\n\n\n\n\n\n\n\n\n\n\n\nThursday\n\n\n\n\n\n\n\n\nSep 17, 2026\n\n\nDelaram Bameri\n\n\n\n\n\n\n\n\n\n\n\n\nFriday\n\n\n\n\n\n\n\n\nSep 18, 2026\n\n\nDelaram Bameri\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
     "title": "Welcome To My Blog",
@@ -62,6 +48,27 @@
     "title": "Welcome To My Blog",
     "section": "Browse by day",
     "text": "Browse by day\n\nMonday\nTuesday\nWednesday\nThursday\nFriday"
+  },
+  {
+    "objectID": "journal.html",
+    "href": "journal.html",
+    "title": "Daily Journal",
+    "section": "",
+    "text": "Monday\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\nDelaram Bameri\n\n\n\n\n\n\n\n\n\n\n\n\nTuesday\n\n\n\n\n\n\n\n\nSep 15, 2026\n\n\nDelaram Bameri\n\n\n\n\n\n\n\n\n\n\n\n\nWednesday\n\n\n\n\n\n\n\n\nSep 16, 2026\n\n\nDelaram Bameri\n\n\n\n\n\n\n\n\n\n\n\n\nThursday\n\n\n\n\n\n\n\n\nSep 17, 2026\n\n\nDelaram Bameri\n\n\n\n\n\n\n\n\n\n\n\n\nFriday\n\n\n\n\n\n\n\n\nSep 18, 2026\n\n\nDelaram Bameri\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Reproducible Research course 2026",
+    "section": "",
+    "text": "Welcome To My Blog\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\nDelaram Bameri\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/acknowledgements/index.html",
+    "href": "posts/acknowledgements/index.html",
+    "title": "Acknowledgements",
+    "section": "",
+    "text": "This course was organized by MedBioInfo, the Swedish National Graduate School in Medical Bioinformatics, which provides advanced national training in medical bioinformatics for PhD students across Sweden’s universities.\nIf you’re a PhD student working in bioinformatics or computational life science, MedBioInfo is genuinely worth looking into. Beyond a full menu of short, advanced courses (typically 3–5 HP each, delivered in sequence throughout the programme), you get a national peer group of fellow PhD students, a faculty mentor who adds perspective beyond your own supervisor, and annual meetings packed with faculty talks, research presentations, workshops, and networking.\nSpeaking from experience: it’s not just about the coursework. I’ve built contacts nationwide and made friendships along the way. It’s a genuinely friendly environment where you learn and train professionally while still enjoying being a PhD student, which isn’t always a given.\nIf this sounds like something you’d want to be part of, visit the MedBioInfo website for details on applying, or reach out to Samuel Flores with any questions."
   },
   {
     "objectID": "posts/Days/Thursday/index.html",

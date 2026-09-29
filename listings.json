@@ -1,11 +1,5 @@
 [
   {
-    "listing": "/index.html",
-    "items": [
-      "/posts/welcome/index.html"
-    ]
-  },
-  {
     "listing": "/journal.html",
     "items": [
       "/posts/Days/Monday/index.html",
@@ -13,6 +7,12 @@
       "/posts/Days/Wednesday/index.html",
       "/posts/Days/Thursday/index.html",
       "/posts/Days/Friday/index.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/welcome/index.html"
     ]
   }
 ]
