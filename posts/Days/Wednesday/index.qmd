@@ -44,12 +44,14 @@ Nextflow and how to use it for reproducible research.
 1. logged into the server: 
     - ssh delaramb@kebnekaise.hpc2n.umu.se
 2. cp -r <source_dir> <destination_dir> to copy the files and directories recursively to the destination directory.
-3. screen -S nextflow then set up the pixi environment:
+3. screen -S nextflow 
+    - then set up the pixi environment:
     - pixi init -c conda-forge -c bioconda (remember the order is important)
     - toml file is created 
     - adding required dependencies ex. nextflow
 4. below is a simple nextflow (hello.nf)
 
+```{.bash}
 #!/usr/bin/env nextflow
 
 params.greeting = 'Hello world!' 
@@ -86,6 +88,7 @@ workflow {
     results_ch = CONVERTTOUPPER(letters_ch.flatten())
     results_ch.view{ it }
 }
+```
 
 4. run the nextflow file: 
     - pixi run nextflow run hello.nf
