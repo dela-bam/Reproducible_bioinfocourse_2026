@@ -18,29 +18,22 @@
     ]
   },
   {
-    "objectID": "posts/Days/Thursday/index.html",
-    "href": "posts/Days/Thursday/index.html",
-    "title": "Thursday",
+    "objectID": "posts/Days/Friday/index.html",
+    "href": "posts/Days/Friday/index.html",
+    "title": "Friday",
     "section": "",
-    "text": "NoteWednesday’s main take-home messages\n\n\n\n\n\nnf-cores, a set of open-source analysis pipelines built by nextflow\n\n\n\n\nWhat I did in sumamryWhat I learnedUseful links\n\n\n\nused sarek and rnaswq pipelines on the avialable data for wgs and rnaseq data provide on the course website, respectively\nfollowed the instruction for input pattern for the pipeline and modify any required configurations, so the pipeline will be ready to launch and used.\n\n\n\n\nhow to run a pipeline (available ones)\nmake a new directory, create the required pixi environment, soft link the input data\ncreate the input csv samplesheet for the data\nfill in the requirement under usage for the selected nf-core pipleine and launch it.\ncopy the json file in the corresponding directory we want to use the pipeline.\nit is recommended to set the “save_references as true”\nmake sure to change the email and project ID (computing source)\nstart the run as learned before\nreminder\n\npixi run nextflow run : we use pixi to use nextflow\npixi run nextflow log : for the previous runs\n\nwell, we can use sbatch to submit our job as an alternative (more recommended)\nimportant …\n\nsometimes the soft links for the input might not work properly, i f u get an error the input file does not exist, this could be another reason after assuring the smaplesheet.csv and every other issues has been confirmed to be coorect.\n\n\n\n\n\nQuarto documentation\nreproducible research course",
+    "text": "NoteWednesday’s main take-home messages\n\n\n\n\n\n\nggplot and data visualization\nAI and different aspects of it in the era of bioinformatics\n\n\n\n\n\nWhat I learned about ggplotWhat I learned about AIUseful links\n\n\n\nggplot is useful due to many reasons, consistent code, flexibility, differnet themes and so many add-ons\nit can simplify the codes and we have a better visualization approach for our data.\nggplot() + geom_function(mapping=aes()) ; these are essentials\nwe can have multiple geoms for one plot\nit can be used to properly save the plot with required resolution/units.\n\n\n\n\nAI has been integrating in our daily life, though it’s use could be balance and therefore it can hep in different aspect.\nit can be an useful tool for learning, however we should not blindly trusting AI.\nregarding privacy, AI can use and access to private data. therefore for important and sensitive data, we should be more cautious while using AI.\nwhile using AI, as users we are responsible regarding the choice of content\nremmeber, AI uses lots of resources and huge amount of EL + water too cool down the hardware. please, remember to optimize the use of AI either for daily life or proffessional life. we all should be considerate for the use of different resources.\n\n\n\n\nggplot\nQuarto documentation\nreproducible research course\nAI",
     "crumbs": [
       "Days",
-      "Thursday"
+      "Friday"
     ]
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
     "section": "",
-    "text": "Welcome to my blog!\nIn this blog, you can trace my learning journey in reproducible research course. Each post will be a summary of what I have learned throughout the specific day of the course. I will also share some of my thoughts and important points for the future references.\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "journal.html",
-    "href": "journal.html",
-    "title": "Daily Journal",
-    "section": "",
-    "text": "Thursday\n\n\n\n\n\n\n\n\nSep 17, 2026\n\n\nDelaram Bameri\n\n\n\n\n\n\n\n\n\n\n\n\nWednesday\n\n\n\n\n\n\n\n\nSep 16, 2026\n\n\nDelaram Bameri\n\n\n\n\n\n\n\n\n\n\n\n\nTuesday\n\n\n\n\n\n\n\n\nSep 15, 2026\n\n\nDelaram Bameri\n\n\n\n\n\n\n\n\n\n\n\n\nMonday\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\nDelaram Bameri\n\n\n\n\n\nNo matching items"
+    "text": "This is a post with executable code."
   },
   {
     "objectID": "index.html",
@@ -50,11 +43,29 @@
     "text": "Welcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\nDelaram Bameri\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\nDelaram Bameri\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "journal.html",
+    "href": "journal.html",
+    "title": "Daily Journal",
     "section": "",
-    "text": "This is a post with executable code."
+    "text": "Friday\n\n\n\n\n\n\n\n\nSep 18, 2026\n\n\nDelaram Bameri\n\n\n\n\n\n\n\n\n\n\n\n\nThursday\n\n\n\n\n\n\n\n\nSep 17, 2026\n\n\nDelaram Bameri\n\n\n\n\n\n\n\n\n\n\n\n\nWednesday\n\n\n\n\n\n\n\n\nSep 16, 2026\n\n\nDelaram Bameri\n\n\n\n\n\n\n\n\n\n\n\n\nTuesday\n\n\n\n\n\n\n\n\nSep 15, 2026\n\n\nDelaram Bameri\n\n\n\n\n\n\n\n\n\n\n\n\nMonday\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\nDelaram Bameri\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "Welcome to my blog!\nIn this blog, you can trace my learning journey in reproducible research course. Each post will be a summary of what I have learned throughout the specific day of the course. I will also share some of my thoughts and important points for the future references.\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/Days/Thursday/index.html",
+    "href": "posts/Days/Thursday/index.html",
+    "title": "Thursday",
+    "section": "",
+    "text": "NoteWednesday’s main take-home messages\n\n\n\n\n\nnf-cores, a set of open-source analysis pipelines built by nextflow\n\n\n\n\nWhat I did in sumamryWhat I learnedUseful links\n\n\n\nused sarek and rnaswq pipelines on the avialable data for wgs and rnaseq data provide on the course website, respectively\nfollowed the instruction for input pattern for the pipeline and modify any required configurations, so the pipeline will be ready to launch and used.\n\n\n\n\nhow to run a pipeline (available ones)\nmake a new directory, create the required pixi environment, soft link the input data\ncreate the input csv samplesheet for the data\nfill in the requirement under usage for the selected nf-core pipleine and launch it.\ncopy the json file in the corresponding directory we want to use the pipeline.\nit is recommended to set the “save_references as true”\nmake sure to change the email and project ID (computing source)\nstart the run as learned before\nreminder\n\npixi run nextflow run : we use pixi to use nextflow\npixi run nextflow log : for the previous runs\n\nwell, we can use sbatch to submit our job as an alternative (more recommended)\nimportant …\n\nsometimes the soft links for the input might not work properly, i f u get an error the input file does not exist, this could be another reason after assuring the smaplesheet.csv and every other issues has been confirmed to be coorect.\n\n\n\n\n\nQuarto documentation\nreproducible research course",
+    "crumbs": [
+      "Days",
+      "Thursday"
+    ]
   },
   {
     "objectID": "posts/Days/Monday/index.html",
