@@ -4,11 +4,11 @@ sidebar: journal
 listing:
   contents: 
     - posts/welcome
-    - posts/post-with-code
+#    - posts/post-with-code
   feed: true
   sort: "date desc"
   type: default
-  categories: true
+#  categories: true
   sort-ui: false
   filter-ui: false
 page-layout: full

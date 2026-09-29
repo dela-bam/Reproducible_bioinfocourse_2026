@@ -1,7 +1,8 @@
 {
   "listingMap": {
     "index.qmd": [
-      "posts/welcome"
+      "posts/welcome",
+      "posts/post-with-code"
     ],
     "journal.qmd": [
       "posts/Days"
