@@ -17,7 +17,8 @@ Nextflow and how to use it for reproducible research.
 1. very basics of nextflow and how to use it for reproducible research.
 2. cp -r <source_dir> <destination_dir> to copy the files and directories recursively to the destination directory.
 3. nextflow receive the input files as channels, they go through processes (the scripts-codes) and then the output files are generated.
-4. In short: 
+4. In short: we have our input as channels, assing a process/task, then the result will be saved as the output. 
+ ```{.bash}
     process <name_the_process_wisely> {
         directives (containers, available modules to be loaded)
 
@@ -34,7 +35,7 @@ Nextflow and how to use it for reproducible research.
 
          u should also specify the workflow for the next flow to know what is the next process after the current process.   
     }           
-           
+```           
 5. introducing the parameters and how to use them in the nextflow script adn workflow.
 
 

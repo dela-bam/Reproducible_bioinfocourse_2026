@@ -34,13 +34,13 @@ Using containers to run the tools in a reproducible way.
 2. download pixi via webget if not installed: 
     wget -qO- https://pixi.sh/install.sh | sh
     source ~/.bashrc (on the server, linux)
-3. set up the pixi environment:
+3. set up the pixi environment (make sure the toml file is created):
     
 ```{.bash} 
 pixi init <name_pixi_training> -c conda-forge -c bioconda 
 ```
     
-    - toml file is created 
+ 
 4. adding dependencies (required packages for the pixi environment):
 ```{.bash} 
 pixi add <package_name> 
@@ -70,7 +70,9 @@ ex:
 pixi run fastqc -o ../fastqc --noextract ../data/*fastq.gz
 ```
 
+::: {.callout-note}
 remember you might need: chmod+x <script_name> to make the script executable.
+:::
 
 sbatch <script_name> to submit the job to the server.
 
