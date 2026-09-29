@@ -279,27 +279,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>ssh delaramb@kebnekaise.hpc2n.umu.se</li>
 </ul></li>
 <li>download pixi via webget if not installed: wget -qO- https://pixi.sh/install.sh | sh source ~/.bashrc (on the server, linux)</li>
-<li>set up the pixi environment:</li>
+<li>set up the pixi environment (make sure the toml file is created):</li>
 </ol>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> init <span class="op">&lt;</span>name_pixi_training<span class="op">&gt;</span> -c conda-forge <span class="at">-c</span> bioconda </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<pre><code>- toml file is created </code></pre>
 <ol start="4" type="1">
 <li>adding dependencies (required packages for the pixi environment):</li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> add <span class="op">&lt;</span>package_name<span class="op">&gt;</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run <span class="op">&lt;</span>package_name<span class="op">&gt;</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> add <span class="op">&lt;</span>package_name<span class="op">&gt;</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run <span class="op">&lt;</span>package_name<span class="op">&gt;</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>to run the package in the pixi environment &lt;–help&gt; or other flags can be used to check the usage of the package 5. Note: on other servers such as uppmax or local we can also do 1) pixi sell 2) <package_name> –help 3) exit 6. <code>{.bash} screen -S &lt;name_of_the session&gt;</code> 7. ctrl + a d to detach the session and ctrl -r <name_of_the_session> to reattach the session, screen -ls to list the sessions 8. soft link of the WGS data to my own directory under project_dir (ln -s) 9. zcat <file>| head -n 10 10. man can initiate the pixi environment without naming it. so on the same directory the pixi environment can be initiated by just typing pixi init and then adding the required packages. 11. scrun -A <compute_proj_id> -t <time> -n <number_of_nodes> pixi run <tools and="" the="" commands="" for="" tools=""> ex: srun -A project_ID -t 15:00 -n 1 pixi run fastqc –noextract -o fastqc data/sampleA_1.fastq.gz data/sampleA_2.fastq.gz</tools></number_of_nodes></time></compute_proj_id></file></name_of_the_session></package_name></p>
 <ol start="12" type="1">
 <li>I prefer to have scripts directory and the bash scripts to do the analysis. ex:</li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">#! /bin/bash -l</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH -A project_ID</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH -t 30:00</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH -n 1</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run fastqc <span class="at">-o</span> ../fastqc <span class="at">--noextract</span> ../data/<span class="pp">*</span>fastq.gz</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#! /bin/bash -l</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH -A project_ID</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH -t 30:00</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH -n 1</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run fastqc <span class="at">-o</span> ../fastqc <span class="at">--noextract</span> ../data/<span class="pp">*</span>fastq.gz</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>remember you might need: chmod+x <script_name> to make the script executable.</script_name></p>
+</div>
+</div>
 <p>sbatch <script_name> to submit the job to the server.</script_name></p>
 <ol start="13" type="1">
 <li>we used the same approach for the multiQC analysis.</li>
