@@ -60,6 +60,7 @@ ex: srun -A project_ID -t 15:00 -n 1 pixi run fastqc --noextract -o fastqc data/
 
 12. I prefer to have scripts directory and the bash scripts to do the analysis. 
 ex:
+```{.bash}
 
 #! /bin/bash -l
 #SBATCH -A project_ID
@@ -67,6 +68,7 @@ ex:
 #SBATCH -n 1
 
 pixi run fastqc -o ../fastqc --noextract ../data/*fastq.gz
+```
 
 remember you might need: chmod+x <script_name> to make the script executable.
 
