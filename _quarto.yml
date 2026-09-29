@@ -13,7 +13,12 @@ website:
     - id: journal
       title: "Journal"
       style: "docked"
-      contents: posts/Days
+      contents: 
+        - posts/Days/Monday/index.qmd
+        - posts/Days/Tuesday/index.qmd
+        - posts/Days/Wednesday/index.qmd
+        - posts/Days/Thursday/index.qmd
+        - posts/Days/Friday/index.qmd
 format:
   html:
     theme:

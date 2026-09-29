@@ -29,17 +29,14 @@ categories: [journal]
 7. make sure to change the email and project ID (computing source) 
 8. start the run as learned before 
 9. reminder 
-    - pixi run nextflow run : we use pixi to use nextflow 
-    - pixi run nextflow log : for the previous runs 
+    - `pixi run nextflow run` : we use pixi to use nextflow 
+    - `pixi run nextflow log` : for the previous runs 
 10. well, we can use sbatch to submit our job as an alternative (more recommended)
 11. important ...
     - sometimes the soft links for the input might not work properly, i f u get an error the input file does not exist, this could be another reason after assuring the smaplesheet.csv and every other issues has been confirmed to be coorect.  
 
 
  
-
-
-    
 
 
 ## Useful links
