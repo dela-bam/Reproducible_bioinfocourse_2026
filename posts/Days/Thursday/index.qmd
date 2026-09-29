@@ -7,19 +7,33 @@ categories: [journal]
 ---
 
 ::: {.callout-note collapse="true" title="Wednesday's main take-home messages"}
-use nf-cores 
+ nf-cores, a set of open-source analysis pipelines built by nextflow
 :::
 
 ::: {.panel-tabset}
 
 ## What I did in sumamry
-1. used sarek pipeline on the avialable data of rnaseq and wgs 
+1. used sarek and rnaswq pipelines on the avialable data for wgs and rnaseq data provide on the course website, respectively
+2. followed the instruction for input pattern for the pipeline and modify any required configurations, so the pipeline will be ready to launch and used. 
 
 
 
 ## What I learned
 
 1. how to run a pipeline (available ones)
+2. make a new directory, create the required pixi environment, soft link the input data 
+3. create the input csv samplesheet for the data
+4. fill in the requirement under usage for the selected nf-core pipleine and launch it. 
+5. copy the json file in the corresponding directory we want to use the pipeline.
+6. it is recommended to set the "save_references as true"
+7. make sure to change the email and project ID (computing source) 
+8. start the run as learned before 
+9. reminder 
+    - pixi run nextflow run : we use pixi to use nextflow 
+    - pixi run nextflow log : for the previous runs 
+10. well, we can use sbatch to submit our job as an alternative (more recommended)
+11. important ...
+    - sometimes the soft links for the input might not work properly, i f u get an error the input file does not exist, this could be another reason after assuring the smaplesheet.csv and every other issues has been confirmed to be coorect.  
 
 
  
