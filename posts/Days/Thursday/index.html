@@ -222,7 +222,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>use nf-cores</p>
+<p>nf-cores, a set of open-source analysis pipelines built by nextflow</p>
 </div>
 </div>
 </div>
@@ -231,12 +231,30 @@ ul.task-list li input[type="checkbox"] {
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <ol type="1">
-<li>used sarek pipeline on the avialable data of rnaseq and wgs</li>
+<li>used sarek and rnaswq pipelines on the avialable data for wgs and rnaseq data provide on the course website, respectively</li>
+<li>followed the instruction for input pattern for the pipeline and modify any required configurations, so the pipeline will be ready to launch and used.</li>
 </ol>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <ol type="1">
 <li>how to run a pipeline (available ones)</li>
+<li>make a new directory, create the required pixi environment, soft link the input data</li>
+<li>create the input csv samplesheet for the data</li>
+<li>fill in the requirement under usage for the selected nf-core pipleine and launch it.</li>
+<li>copy the json file in the corresponding directory we want to use the pipeline.</li>
+<li>it is recommended to set the “save_references as true”</li>
+<li>make sure to change the email and project ID (computing source)</li>
+<li>start the run as learned before</li>
+<li>reminder
+<ul>
+<li>pixi run nextflow run : we use pixi to use nextflow</li>
+<li>pixi run nextflow log : for the previous runs</li>
+</ul></li>
+<li>well, we can use sbatch to submit our job as an alternative (more recommended)</li>
+<li>important …
+<ul>
+<li>sometimes the soft links for the input might not work properly, i f u get an error the input file does not exist, this could be another reason after assuring the smaplesheet.csv and every other issues has been confirmed to be coorect.</li>
+</ul></li>
 </ol>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
